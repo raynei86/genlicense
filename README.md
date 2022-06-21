@@ -8,3 +8,5 @@ sudo make install
 
 ## Credits
 Heavily inspired by [legit](https://github.com/captainsafia/legit) and [mklicense](https://github.com/cezaraugusto/mklicense).
+
+I rewrote in C because Javascript bad!!11!
