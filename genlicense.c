@@ -5,21 +5,32 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef enum {
-	MIT,
-	BSD_2,
-	BSD_3,
-	GPL,
-	MPL,
-} LicenseType;
+#include "licenses.h"
 
 #define VERSION "0.1"
 
+static void run();
+
 static char *license, *author, *date; // Interesting syntax
+
+static void
+run()
+{
+	FILE *f = fopen("LICENSE", "w");
+
+	if (!strcmp(license, "mit")) {
+		fprintf(f, MIT, date, author);
+	}
+}
 
 int
 main(int argc, char **argv)
 {
+	if (argc < 2) {
+		puts("usage: genlicense [-l license] [-a authors] [-d date]");
+		exit(EXIT_FAILURE);
+	}
+
 	for (int i = 1; i < argc; i++) {
 		/* Options that don't take additional arguments */
 		if (!strcmp(argv[i], "-h")) {
@@ -38,8 +49,7 @@ main(int argc, char **argv)
 			author = argv[++i];
 		else if (!strcmp(argv[i], "-d"))
 			date = argv[++i];
-		else
-			puts(
-			    "usage: genlicense [-l license] [-a authors] [-d date]");
 	}
+
+	run();
 }
