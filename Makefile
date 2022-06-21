@@ -1,4 +1,4 @@
-FLAGS = -Wall -Wextra -Os -std=c99
+FLAGS = -Wall -Wextra -Wpedantic -Os -std=c99
 
 genlicense: genlicense.c
 	cc genlicense.c $(FLAGS) -o genlicense
