@@ -5,3 +5,6 @@ genlicense: genlicense.c
 
 install: genlicense
 	mv genlicense /usr/bin
+
+clean:
+	rm genlicense
