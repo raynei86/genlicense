@@ -15,9 +15,7 @@ typedef enum {
 
 #define VERSION "0.1"
 
-static void setLicense(const char *license);
-static void setAuthor(const char *author);
-static void setDate(const char *date);
+static char *license, *author, *date; // Interesting syntax
 
 int
 main(int argc, char **argv)
@@ -35,11 +33,11 @@ main(int argc, char **argv)
 
 		/* Options that take additional arguments */
 		else if (!strcmp(argv[i], "-l"))
-			setLicense(argv[++i]);
+			license = argv[++i];
 		else if (!strcmp(argv[i], "-a"))
-			setAuthor(argv[++i]);
+			author = argv[++i];
 		else if (!strcmp(argv[i], "-d"))
-			setDate(argv[++i]);
+			date = argv[++i];
 		else
 			puts(
 			    "usage: genlicense [-l license] [-a authors] [-d date]");
