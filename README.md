@@ -3,6 +3,8 @@ because copying and pasting is outdated.
 
 ## Install
 ``` sh
+git clone https://github.com/raynei86/genlicense
+cd genlicense
 sudo make install
 ```
 
