@@ -21,6 +21,8 @@ run()
 	if (!strcmp(license, "mit")) {
 		fprintf(f, MIT, date, author);
 	}
+
+    fclose(f);
 }
 
 int
