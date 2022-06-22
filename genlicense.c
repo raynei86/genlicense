@@ -9,9 +9,10 @@
 
 #define VERSION "0.1"
 
-static void run();
+static void run(void);
+static void parseAuthor(char **args, int pos, char *buf);
 
-static char *license, *author, *date; // Interesting syntax
+static char *license, author[128], *date; // Interesting syntax
 
 static void
 run()
@@ -22,7 +23,17 @@ run()
 		fprintf(f, MIT, date, author);
 	}
 
-    fclose(f);
+	fclose(f);
+}
+
+static void
+parseAuthor(char **args, int pos, char *buf)
+{
+	for (char *c = args[pos]; strstr(c, "-") == NULL; c = args[pos]) {
+		strcat(buf, c);
+		strcat(buf, " ");
+		pos++;
+	}
 }
 
 int
@@ -48,7 +59,7 @@ main(int argc, char **argv)
 		else if (!strcmp(argv[i], "-l"))
 			license = argv[++i];
 		else if (!strcmp(argv[i], "-a"))
-			author = argv[++i];
+			parseAuthor(argv, ++i, author);
 		else if (!strcmp(argv[i], "-d"))
 			date = argv[++i];
 	}
