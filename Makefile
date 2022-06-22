@@ -4,7 +4,8 @@ genlicense: genlicense.c
 	cc genlicense.c $(FLAGS) -o genlicense
 
 install: genlicense
-	mv genlicense /usr/bin
+	cp genlicense /usr/bin
+	cp genlicense.1 /usr/local/share/man/man1/
 
 clean:
 	rm genlicense

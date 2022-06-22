@@ -1,0 +1,96 @@
+'\" t
+.\"     Title: genlicense
+.\"    Author: Zhang Lihui
+.\" Generator: Asciidoctor 2.0.17
+.\"      Date: 2022-06-22
+.\"    Manual: genlicense
+.\"    Source: genlicense
+.\"  Language: English
+.\"
+.TH "GENLICENSE" "1" "2022-06-22" "genlicense" "genlicense"
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.ss \n[.ss] 0
+.nh
+.ad l
+.de URL
+\fI\\$2\fP <\\$1>\\$3
+..
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
+.SH "NAME"
+genlicense \- A small utility to generate open source licenses
+.SH "SYNOPSIS"
+.sp
+\fBgenlicense\fP [\-l license] [\-a authors] [\-d date]
+.SH "OPTIONS"
+.sp
+\fB\-l\fP
+The license type.
+The following licenses are currently supported:
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 1.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 1." 4.2
+.\}
+MIT (\fBmit\fP)
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 2.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 2." 4.2
+.\}
+BSD 2 Clause (\fBbsd_2\fP)
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 3.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 3." 4.2
+.\}
+Bsd 3 Clause (\fBbsd_3\fP)
+.RE
+.sp
+\fB\-a\fP
+The author/authors to insert into the license.
+.sp
+\fB\-d\fP
+The date to insert into the license.
+.SH "USAGE"
+.sp
+.if n .RS 4
+.nf
+.fam C
+genlicense \-l mit \-a John Doe \-d 2004
+genlicense \-l bsd_2 \-a "Jane Doe and Doe Jane" \-d 1999
+.fam
+.fi
+.if n .RE
+.SH "COPYING"
+.sp
+Copyright (c) 2022 Zhang Lihui \c
+.sp
+Free use of this software is granted under the terms of the Unlicense license.
+.SH "AUTHOR"
+.sp
+Zhang Lihui <raynei@protonmail.com>
