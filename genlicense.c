@@ -19,9 +19,12 @@ run()
 {
 	FILE *f = fopen("LICENSE", "w");
 
-	if (!strcmp(license, "mit")) {
+	if (!strcmp(license, "mit"))
 		fprintf(f, MIT, date, author);
-	}
+	else if (!strcmp(license, "bsd_2"))
+		fprintf(f, BSD_2, date, author);
+	else if (!strcmp(license, "bsd_3"))
+		fprintf(f, BSD_3, date, author);
 
 	fclose(f);
 }
