@@ -22,3 +22,7 @@ genlicense -l mit -a John Doe and Jane Doe -d 2022
 Heavily inspired by [legit](https://github.com/captainsafia/legit) and [mklicense](https://github.com/cezaraugusto/mklicense).
 
 I rewrote in C because Javascript bad!!11!
+
+### Afternote
+Something as simple as this can probably be rewritten in shell script,
+I'd be happy to know if someone more well versed in shell than me did it.
