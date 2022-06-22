@@ -2,9 +2,9 @@ A simple utility to generate your licenses for your new repository,
 because copying and pasting is outdated.
 
 ## Supported Licenses
-1. MIT
-2. BSD 2 Clause
-3. Bsd 3 Clause
+- MIT
+-  BSD 2 Clause
+- Bsd 3 Clause
 
 ## Install
 ``` sh
